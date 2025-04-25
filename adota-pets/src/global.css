@@ -1,8 +1,7 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
+:root {
+     
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
@@ -11,7 +10,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
 
 * {
@@ -26,8 +24,8 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 1.6rem; 
-  color: #333;
+  font-size: 1.8rem;
+ 
 }
 
 img {
@@ -46,7 +44,6 @@ p {
   padding: 0;
 }
 
-
 ul,
 li {
   list-style: none;
@@ -59,7 +56,6 @@ input {
   display: block;
   font-size: 1.6rem;
 }
-
 
 a {
   font-weight: 500;
