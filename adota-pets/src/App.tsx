@@ -4,16 +4,27 @@ import Loading from "./helpers/Loading";
 import { lazy, Suspense } from "react";
 import NotFound from "./components/NotFound/NotFound";
 
-const Dashboard = lazy(()=>import('./components/Dashboard/Dashboard') )
+const Dashboard = lazy(() => import("./components/Dashboard/Dashboard"));
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-         <Route path="/" element={<Suspense fallback={<Loading/>}><Dashboard/></Suspense>}></Route>
-         <Route path="*" element={<NotFound/>}></Route>
-      </Routes>
+      <div className="flex min-h-lvh ">
+        <Navbar />
+        <div className="flex-1 pt-4">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Dashboard />
+                </Suspense>
+              }
+            ></Route>
+            <Route path="*" element={<NotFound />}></Route>
+          </Routes>
+        </div>
+      </div>
     </BrowserRouter>
   );
 }

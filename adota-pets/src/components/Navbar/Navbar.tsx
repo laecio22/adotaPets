@@ -1,8 +1,38 @@
 
+
+const itemsNavbar = [
+  {
+    label: "Dashboard",
+  },
+
+  {
+    label: "Listagem de  Animais",
+  },
+  {
+    label: "Adoções",
+  },
+
+  {
+    label: "Voluntários",
+  },
+  {
+    label: "Eventos",
+  },
+
+  {
+    label: "Configurações",
+  },
+];
 const Navbar = () => {
   return (
-    <div>Navbar</div>
-  )
-}
+    <nav className="w-[300px] bg-gray-800 text-white flex justify-center  ">
+      <ul>
+        {itemsNavbar.map((item) => (
+          <li key={item.label}>{item.label}</li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;
