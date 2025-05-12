@@ -25,7 +25,7 @@ const itemsNavbar = [
 ];
 const Navbar = () => {
   return (
-    <nav className="w-[300px] bg-gray-800 text-white flex justify-center  ">
+    <nav className="w-[300px] bg-gray-800 text-white flex justify-center pt-8 ">
       <ul>
         {itemsNavbar.map((item) => (
           <li key={item.label}>{item.label}</li>
