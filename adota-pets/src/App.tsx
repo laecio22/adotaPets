@@ -9,7 +9,7 @@ const Dashboard = lazy(() => import("./components/Dashboard/Dashboard"));
 function App() {
   return (
     <BrowserRouter>
-      <div className="flex min-h-lvh  ">
+      <div className="flex min-h-screen  ">
         <Navbar />
         <div className="flex-1 pt-8">
           <Routes>
