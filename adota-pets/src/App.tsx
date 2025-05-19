@@ -3,13 +3,20 @@ import Navbar from "./components/Navbar/Navbar";
 import Loading from "./helpers/Loading";
 import { lazy, Suspense } from "react";
 import NotFound from "./components/NotFound/NotFound";
+import Adoptions from "./components/Adoptions/Adoptions";
 
 const Dashboard = lazy(() => import("./components/Dashboard/Dashboard"));
+const ListAnimals = lazy(() => import("./components/ListAnimals/ListAnimals"));
+const ListVolunteer = lazy(
+  () => import("./components/ListVolunteer/ListVolunteer")
+);
+const Eventos = lazy(() => import("./components/Eventos/Eventos"));
+const Settings = lazy(() => import("./components/Settings/Settings"));
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="flex min-h-screen  ">
+      <main className="flex min-h-screen  ">
         <Navbar />
         <div className="flex-1 pt-8">
           <Routes>
@@ -21,10 +28,50 @@ function App() {
                 </Suspense>
               }
             ></Route>
+            <Route
+              path="/listarAnimais"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <ListAnimals />
+                </Suspense>
+              }
+            ></Route>
+            <Route
+              path="/adocoes"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Adoptions />
+                </Suspense>
+              }
+            ></Route>
+            <Route
+              path="/voluntarios"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <ListVolunteer />
+                </Suspense>
+              }
+            ></Route>
+            <Route
+              path="/eventos"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Eventos />
+                </Suspense>
+              }
+            ></Route>
+            <Route
+              path="/configuracoes"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Settings />
+                </Suspense>
+              }
+            ></Route>
             <Route path="*" element={<NotFound />}></Route>
           </Routes>
         </div>
-      </div>
+      </main>
     </BrowserRouter>
   );
 }
