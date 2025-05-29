@@ -5,6 +5,9 @@ import { BsPeople } from "react-icons/bs";
 import { MdOutlineEventAvailable } from "react-icons/md";
 import { GrConfigure } from "react-icons/gr";
 import { NavLink} from "react-router";
+import { FaBars, FaXmark } from "react-icons/fa6";
+import { useState } from "react";
+
 
 const itemsNavbar = [
   {
@@ -42,15 +45,19 @@ const itemsNavbar = [
   },
 ];
 const Navbar = () => {
+  const [openMenu, setOpenMenu] =  useState(false)
+  
+
   return (
-    <nav className="w-[300px] bg-gray-800 text-white pt-8 flex justify-center  ">
+    <nav className=" bg-gray-800 text-white pt-8 flex justify-center  ">
       <ul className="w-full  ">
         {itemsNavbar.map((item) => (
           <li key={item.label}>
             <NavLink
               to={item.url}
-              className="mt-10 flex gap-2 h-20 items-center   hover:bg-slate-400  pl-12 transition duration-300 cursor-pointer
-          hover:text-sky-200"
+              className = {({isActive}) => {
+              return   isActive ? " text-sky-600  mt-10 flex gap-2 h-20 items-center pl-12 transition duration-300 cursor-pointer" : "mt-10 flex gap-2 h-20 items-center   hover:bg-slate-400  pl-12 transition duration-300 cursor-pointer hover:text-sky-200"
+              }}             
             >
               <span>{item.icon}</span>
               {item.label}

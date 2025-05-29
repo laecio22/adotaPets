@@ -16,9 +16,9 @@ const Settings = lazy(() => import("./components/Settings/Settings"));
 function App() {
   return (
     <BrowserRouter>
-      <main className="flex min-h-screen  ">
+      <main className="grid min-h-screen sm:grid-cols-[300px_1fr] grid-cols-1 ">
         <Navbar />
-        <div className="flex-1 pt-8">
+        <div className=" pt-12">
           <Routes>
             <Route
               path="/"
