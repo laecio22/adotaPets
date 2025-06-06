@@ -43,21 +43,36 @@ const itemsNavbar = [
     url: "/configuracoes",
   },
 ];
+
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
+  const handleItemClick = () => {
+    if (window.innerWidth < 640) { // 640px é o breakpoint 'sm' do Tailwind
+      setOpenMenu(false);
+    }
+  };
+
   return (
-    <nav className=" bg-gray-800 text-white pt-8 flex   ">
-      <ul className="w-full  ">
+    <nav className="bg-gray-800 text-white h-16 flex items-center justify-between px-4 relative sm:h-screen sm:flex-col sm:items-start sm:pt-0">
+      <button 
+        onClick={() => setOpenMenu(!openMenu)} 
+        className="sm:hidden block text-2xl"
+      >
+        {openMenu ? <FaXmark /> : <FaBars />}
+      </button>
+
+      <ul className={`absolute top-16 left-0 w-full bg-gray-800 ${openMenu ? 'block' : 'hidden'} sm:relative sm:top-0 sm:block sm:pt-8`}>
         {itemsNavbar.map((item) => (
           <li key={item.label}>
             <NavLink
               to={item.url}
               className={({ isActive }) => {
                 return isActive
-                  ? " text-sky-600  mt-10 flex gap-2 h-20 items-center pl-12 transition duration-300 cursor-pointer"
-                  : "mt-10 flex gap-2 h-20 items-center   hover:bg-slate-400  pl-12 transition duration-300 cursor-pointer hover:text-sky-200";
+                  ? "text-sky-600 mt-10 flex gap-2 h-20 items-center pl-12 transition duration-300 cursor-pointer"
+                  : "mt-10 flex gap-2 h-20 items-center hover:bg-slate-400 pl-12 transition duration-300 cursor-pointer hover:text-sky-200";
               }}
+              onClick={handleItemClick}
             >
               <span>{item.icon}</span>
               {item.label}
@@ -65,13 +80,6 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      <button onClick={() => setOpenMenu(!openMenu)} className="cursor-pointer">
-        {openMenu ? (
-          <FaXmark  />
-        ) : (
-          <FaBars />
-        )}
-      </button>
     </nav>
   );
 };
