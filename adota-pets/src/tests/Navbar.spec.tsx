@@ -9,11 +9,11 @@ describe("Navbar", () => {
         <Navbar />
       </MemoryRouter>
     );
-    screen.getByText("Dashboard");
-    screen.getByText("Listagem de Animais");
-    screen.getByText("Adoções");
-    screen.getByText("Voluntários");
-    screen.getByText("Eventos");
-    screen.getByText("Configurações");
+   const LinkDashboard = screen.getByText("Dashboard");
+   const LinkListAnimals = screen.getByText("Listagem de Animais");
+   const LinkAdoptions = screen.getByText("Adoções");
+   const LinkVolunteers = screen.getByText("Voluntários");
+   const LinkEventos = screen.getByText("Eventos");
+   const LinkSettings = screen.getByText("Configurações");
   });
 });
