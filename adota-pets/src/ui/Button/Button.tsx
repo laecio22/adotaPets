@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { IoAdd } from "react-icons/io5";
+
 
 interface IButtonProps {
   children: ReactNode;
@@ -13,9 +13,10 @@ const Button = ({ children, width, height }: IButtonProps) => {
       role="button"
       className={`${width} ${height} bg-green-500 cursor-pointer text-white rounded-md hover:bg-green-600
     outline-offset-0 outline-green-500 focus:outline-2
+    flex justify-center items-center
     
     `}
-    >
+    >  
       {children}
     </button>
   );
