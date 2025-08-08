@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Loading from "./helpers/Loading";
 import { lazy, Suspense } from "react";
 import NotFound from "./components/NotFound/NotFound";
-import Adoptions from "./components/Adoptions/Adoptions";
+
 
 const Dashboard = lazy(() => import("./components/Dashboard/Dashboard"));
 const ListAnimals = lazy(() => import("./components/ListAnimals/ListAnimals"));
@@ -12,11 +12,12 @@ const ListVolunteer = lazy(
 );
 const Eventos = lazy(() => import("./components/Eventos/Eventos"));
 const Settings = lazy(() => import("./components/Settings/Settings"));
+const Adoptions = lazy(()=>import('./components/Adoptions/Adoptions'));
 
 function App() {
   return (
     <BrowserRouter>
-      <main className="grid min-h-screen sm:grid-cols-[300px_1fr] grid-cols-1  bg-gray-200">
+      <main className="grid min-h-screen sm:grid-cols-[280px_1fr] grid-cols-1  bg-gray-200">
         <Navbar />
         <div className=" pt-12 ">
           <Routes>

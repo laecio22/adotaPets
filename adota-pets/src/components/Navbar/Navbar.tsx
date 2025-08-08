@@ -54,7 +54,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 text-white min-h-screen flex items-center justify-between px-4 relative sm:h-screen sm:flex-col sm:items-start sm:pt-0">
+    <nav className="bg-gray-800 text-white  flex items-center justify-between px-4 relative sm:h-screen sm:flex-col sm:items-start sm:pt-0">
       <button 
         onClick={() => setOpenMenu(!openMenu)} 
         className="sm:hidden block text-2xl"
