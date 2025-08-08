@@ -54,7 +54,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 text-white h-16 flex items-center justify-between px-4 relative sm:h-screen sm:flex-col sm:items-start sm:pt-0">
+    <nav className="bg-gray-800 text-white min-h-screen flex items-center justify-between px-4 relative sm:h-screen sm:flex-col sm:items-start sm:pt-0">
       <button 
         onClick={() => setOpenMenu(!openMenu)} 
         className="sm:hidden block text-2xl"
@@ -62,7 +62,7 @@ const Navbar = () => {
         {openMenu ? <FaXmark /> : <FaBars />}
       </button>
 
-      <ul className={`absolute top-16 left-0 w-full bg-gray-800 ${openMenu ? 'block' : 'hidden'} sm:relative sm:top-0 sm:block sm:pt-8`}>
+      <ul className={`absolute top-16 left-0 w-full  bg-gray-800 ${openMenu ? 'block' : 'hidden'} sm:relative sm:top-0 sm:block sm:pt-8`}>
         {itemsNavbar.map((item) => (
           <li key={item.label}>
             <NavLink

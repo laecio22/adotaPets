@@ -16,7 +16,7 @@ const Settings = lazy(() => import("./components/Settings/Settings"));
 function App() {
   return (
     <BrowserRouter>
-      <main className="grid min-h-screen sm:grid-cols-[300px_1fr] grid-cols-1 ">
+      <main className="grid min-h-screen sm:grid-cols-[300px_1fr] grid-cols-1  bg-gray-200">
         <Navbar />
         <div className=" pt-12 ">
           <Routes>
