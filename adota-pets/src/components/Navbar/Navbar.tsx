@@ -54,12 +54,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 text-white  flex items-center justify-between px-4 relative sm:h-screen sm:flex-col sm:items-start sm:pt-0">
+    <nav className="bg-gray-800 text-white  flex items-center justify-between px-4 relative min-h-28  sm:min-h-screen sm:flex-col sm:items-start sm:pt-0">
       <button 
         onClick={() => setOpenMenu(!openMenu)} 
         className="sm:hidden block text-2xl"
       >
-        {openMenu ? <FaXmark /> : <FaBars />}
+        {openMenu ? <FaXmark  className="mb-3 w-10 h-10 "  /> : <FaBars size={20}/>}
       </button>
 
       <ul className={`absolute top-16 left-0 w-full  bg-gray-800 ${openMenu ? 'block' : 'hidden'} sm:relative sm:top-0 sm:block sm:pt-8`}>

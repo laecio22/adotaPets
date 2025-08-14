@@ -26,10 +26,7 @@ const ListAnimals = () => {
           <CardAnimal></CardAnimal>
            <CardAnimal></CardAnimal>
           <CardAnimal></CardAnimal>
-          <CardAnimal></CardAnimal>
-           <CardAnimal></CardAnimal>
-          <CardAnimal></CardAnimal>
-          <CardAnimal></CardAnimal>
+          <CardAnimal></CardAnimal>         
         </div>
       </section>
     </section>
