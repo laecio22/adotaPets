@@ -2,6 +2,7 @@ import Button from "../../ui/Button/Button";
 import Input from "../../ui/Input/Input";
 import CardAnimal from "../CardAnimal/CardAnimal";
 import { IoAdd } from "react-icons/io5";
+import { pets } from "../../data";
 
 const ListAnimals = () => {
   return (
@@ -21,12 +22,12 @@ const ListAnimals = () => {
           <h1 className="font-semibold text-4xl">Animais para Adoção</h1>
         </header>
         <div className="flex justify-between flex-wrap gap-10 px-8  ">
-          <CardAnimal></CardAnimal>
-          <CardAnimal></CardAnimal>
-          <CardAnimal></CardAnimal>
-           <CardAnimal></CardAnimal>
-          <CardAnimal></CardAnimal>
-          <CardAnimal></CardAnimal>         
+          {
+           pets.length > 0 ? pets.map((pet) => (
+              <CardAnimal key={pet.id} pet={pet} />
+            )) : <p>Nenhum animal disponível para adoção no momento.</p>
+          }
+          
         </div>
       </section>
     </section>
