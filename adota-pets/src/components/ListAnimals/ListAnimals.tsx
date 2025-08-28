@@ -19,7 +19,7 @@ const ListAnimals = () => {
       </header>
       <section className="bg-white border border-indigo-200 rounded-xl min-h-[400px] mt-20  mx-5  ">
         <header className=" px-8 py-12">
-          <h1 className="font-semibold text-4xl">Animais para Adoção</h1>
+          <h2 className="font-semibold text-4xl">Animais para Adoção</h2>
         </header>
         <div className="flex justify-between flex-wrap gap-10 px-8  ">
           {
