@@ -7,8 +7,9 @@ import { GrConfigure } from "react-icons/gr";
 import { NavLink } from "react-router";
 import { FaBars, FaXmark } from "react-icons/fa6";
 import { useState } from "react";
+import { INavbarItem } from "../../types/INavbarItem";
 
-const itemsNavbar = [
+const itemsNavbar: INavbarItem[] = [
   {
     label: "Dashboard",
     icon: <RxDashboard />,
@@ -48,21 +49,30 @@ const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const handleItemClick = () => {
-    if (window.innerWidth < 640) { // 640px é o breakpoint 'sm' do Tailwind
+    if (window.innerWidth < 640) {
+      // 640px é o breakpoint 'sm' do Tailwind
       setOpenMenu(false);
     }
   };
 
   return (
     <nav className="bg-gray-800 text-white  flex items-center justify-between px-4 relative min-h-28  sm:min-h-screen sm:flex-col sm:items-start sm:pt-0">
-      <button 
-        onClick={() => setOpenMenu(!openMenu)} 
+      <button
+        onClick={() => setOpenMenu(!openMenu)}
         className="sm:hidden block text-2xl"
       >
-        {openMenu ? <FaXmark  className="mb-3 w-10 h-10 "  /> : <FaBars size={20}/>}
+        {openMenu ? (
+          <FaXmark className="mb-3 w-10 h-10 " />
+        ) : (
+          <FaBars size={20} />
+        )}
       </button>
 
-      <ul className={`absolute top-16 left-0 w-full  bg-gray-800 ${openMenu ? 'block' : 'hidden'} sm:relative sm:top-0 sm:block sm:pt-8`}>
+      <ul
+        className={`absolute top-16 left-0 w-full  bg-gray-800 ${
+          openMenu ? "block" : "hidden"
+        } sm:relative sm:top-0 sm:block sm:pt-8`}
+      >
         {itemsNavbar.map((item) => (
           <li key={item.label}>
             <NavLink

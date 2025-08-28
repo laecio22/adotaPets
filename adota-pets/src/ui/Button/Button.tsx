@@ -1,11 +1,4 @@
-import { ReactNode } from "react";
-
-
-interface IButtonProps {
-  children: ReactNode;
-  width?: string;
-  height?: string;
-}
+import { IButtonProps } from "../../types/IButtonProps";
 
 const Button = ({ children, width, height }: IButtonProps) => {
   return (

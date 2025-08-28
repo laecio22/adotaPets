@@ -1,8 +1,4 @@
-interface InputProps {
-  type: string;
-  name: string;
-  placeholder: string;
-}
+import { InputProps } from "../../types/InputProps"
 
 const Input = ({type, name,  placeholder}: InputProps) => {
   return (

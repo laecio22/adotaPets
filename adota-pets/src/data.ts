@@ -1,22 +1,10 @@
-interface IPet {   
-    id: number;
-    nome: string;       
-    tipo: string;     
-    idade: string;
-    sexo: string;       
-    tamanho: string;
-    peso: string;
-    imagem: string;
-    descricao: string;
-    adotado: boolean;
-    quantidade_dias_adocao: number;
-}
+import { IPet } from "./types/IPet";
 export  const pets:IPet[] = [
     {
         id: 1,
         nome: "Luna",   
         tipo: "Cachorro",
-        idade: "2 anos",
+        idade: 2,
         sexo: "Fêmea",
         tamanho: "Médio",
         peso: "15kg",
@@ -29,7 +17,7 @@ export  const pets:IPet[] = [
         id: 2,
         nome: "Mia",   
         tipo: "Gato",
-        idade: "1 ano",
+        idade: 1,
         sexo: "Fêmea",
         tamanho: "Pequeno",
         peso: "4kg",
@@ -42,7 +30,7 @@ export  const pets:IPet[] = [
         id: 3,
         nome: "Max",   
         tipo: "Cachorro",
-        idade: "3 anos",
+        idade: 3,
         sexo: "Macho",
         tamanho: "Grande",
         peso: "30kg",
@@ -55,7 +43,7 @@ export  const pets:IPet[] = [
         id: 4,
         nome: "Bella",   
         tipo: "Gato",
-        idade: "4 anos",
+        idade: 4,
         sexo: "Fêmea",
         tamanho: "Médio",
         peso: "6kg",

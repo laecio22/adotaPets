@@ -24,7 +24,7 @@ const ListAnimals = () => {
         <div className="flex justify-between flex-wrap gap-10 px-8  ">
           {
            pets.length > 0 ? pets.map((pet) => (
-              <CardAnimal key={pet.id} pet={pet} />
+              <CardAnimal key={pet.id} {...pet} />
             )) : <p>Nenhum animal disponível para adoção no momento.</p>
           }
           
