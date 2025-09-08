@@ -1,10 +1,14 @@
+import { useContext } from "react";
 import Button from "../../ui/Button/Button";
 import Input from "../../ui/Input/Input";
 import CardAnimal from "../CardAnimal/CardAnimal";
 import { IoAdd } from "react-icons/io5";
-import { pets } from "../../data";
+import {AnimalContext} from "../../contexts/AnimalContext"
+// import { pets } from "../../data";
 
 const ListAnimals = () => {
+  const{listPets} = useContext(AnimalContext)
+
   return (
     <section className="max-w-[1200px]  mx-auto ">
       <header className="bg-white px-8 py-12 border border-indigo-200 rounded-xl mx-5">
@@ -23,7 +27,7 @@ const ListAnimals = () => {
         </header>
         <div className="flex justify-between flex-wrap gap-4 px-8  ">
           {
-           pets.length > 0 ? pets.map((pet) => (
+           listPets.length > 0 ? listPets.map((pet) => (
               <CardAnimal key={pet.id} {...pet} />
             )) : <p>Nenhum animal disponível para adoção no momento.</p>
           }

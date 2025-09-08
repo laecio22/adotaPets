@@ -51,5 +51,31 @@ export  const pets:IPet[] = [
         descricao: "Bella é uma gata elegante e independente que adora explorar novos lugares e caçar brinquedos.",
         adotado: false,
         quantidade_dias_adocao: 15
+    },
+    {
+        id: 5,
+        nome: "Charlie",        
+        tipo: "Cachorro",       
+        idade: 2,                       
+        sexo: "Macho",
+        tamanho: "Pequeno",
+        peso: "10kg",
+        imagem: "https://images.unsplash.com/photo-1558788353-f76d92427f16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvcnRofGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",   
+        descricao: "Charlie é um cachorro energético e amigável que adora brincar com crianças e outros animais.",
+        adotado: true,
+        quantidade_dias_adocao: 8   
+    },
+    {
+        id: 6,
+        nome: "Lucy",           
+        tipo: "Gato",
+        idade: 3,
+        sexo: "Fêmea",
+        tamanho: "Médio",
+        peso: "5kg",
+        imagem:  "https://images.unsplash.com/photo-1619857172464-7ea69a9ba9ba?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",  
+        descricao: "Lucy é uma gatinha curiosa e brincalhona que adora explorar novos lugares e caçar brinquedos.",
+        adotado: false,
+        quantidade_dias_adocao: 12   
     }
     ]
