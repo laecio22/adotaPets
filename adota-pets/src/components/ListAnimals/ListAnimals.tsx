@@ -3,11 +3,11 @@ import Button from "../../ui/Button/Button";
 import Input from "../../ui/Input/Input";
 import CardAnimal from "../CardAnimal/CardAnimal";
 import { IoAdd } from "react-icons/io5";
-import {AnimalContext} from "../../contexts/AnimalContext"
-// import { pets } from "../../data";
+import { AnimalContext } from "../../contexts/AnimalContext";
+import { IPet } from "../../types/IPet";
 
 const ListAnimals = () => {
-  const{listPets} = useContext(AnimalContext)
+  const{listPets}:{listPets:IPet[]} = useContext(AnimalContext)
 
   return (
     <section className="max-w-[1200px]  mx-auto ">
