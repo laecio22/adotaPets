@@ -3,23 +3,23 @@ import Button from "../../ui/Button/Button";
 
 const CardAnimal = (pet: IPet) => {
   return (
-    <div className="h-[400px] w-[360px]  ">
+    <div className="h-[400px] w-[360px] bg-gray-100 rounded-b-xl ">
       <img
         src={pet.imagem}
         alt={pet.nome}
-        className="h-[250px] w-full object-cover"
+        className="h-[250px] w-full object-cover border border-none rounded-t-xl "
       />
       <div className="p-4 flex flex-col gap-2">
-        <h2 className="text-3xl font-bold mb-2">{pet.nome}</h2>
+        <h2 className="text-3xl font-bold mb-2  text-black">{pet.nome}</h2>
         <div>
           <span className="text-gray-400 mb-1"> {pet.tipo} .</span>
           <span className="text-gray-400 mb-1"> {pet.idade} Anos .</span>
           <span className="text-gray-400 mb-1"> {pet.sexo}</span>
         </div>
         <div  className="mt-4 flex justify-between gap-3 ">
-          <Button width=" w-40" height="h-20" backgroundColor="bg-blue-400"
+          {/* <Button width=" w-40" height="h-20" backgroundColor="bg-blue-400"
           hoverColor="hover:bg-blue-500"
-          outLineColor="outline-blue-500">Adotar</Button>
+          outLineColor="outline-blue-500">Adotar</Button> */}
           <Button width=" w-50" height="h-20" backgroundColor="bg-zinc-400"
           hoverColor="hover:bg-zinc-500"
           outLineColor="outline-zinc-500"
@@ -27,8 +27,8 @@ const CardAnimal = (pet: IPet) => {
              <Button width=" w-40" height="h-20" 
           >Editar</Button>
              <Button width=" w-40" height="h-20" backgroundColor="bg-red-400"
-          hoverColor="hover:bg-red-500"
-          outLineColor="outline-red-500"
+          hoverColor="hover:bg-red-600"
+          outLineColor="outline-red-600"
           >Excluir</Button>
         </div>
         {/* <p className="text-gray-700 mb-1"><strong>Tipo:</strong> {pet.tipo}</p>
