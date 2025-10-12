@@ -1,21 +1,30 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Button from "../../ui/Button/Button";
 import Input from "../../ui/Input/Input";
 import CardAnimal from "../CardAnimal/CardAnimal";
 import { IoAdd } from "react-icons/io5";
 import { AnimalContext } from "../../contexts/AnimalContext";
 import { IPet } from "../../types/IPet";
+import Modal from "../Modals/Modal";
 
 const ListAnimals = () => {
   const { listPets }: { listPets: IPet[] } = useContext(AnimalContext);
+  const [isOpenModal, setIsOpenModal] =  useState(false)
+
+  const  addAnimal  = () => {
+    console.log('adicionou animal')
+  }
 
   return (
     <main className="max-w-[1200px] mx-auto">
+      <Modal open={isOpenModal} setOpen={setIsOpenModal}>
+        TEXTO  MODAL
+      </Modal>
       <header className="bg-white px-8 py-12 border border-indigo-200 rounded-xl mx-5">
         <h1 className="font-semibold text-4xl text-black">Listagem de Animais</h1>
         <nav className="mt-4 flex justify-between" aria-label="Ações de listagem">
           <Input type="text" name="search" placeholder="Buscar  animal" />
-          <Button width="sm:w-[150px] w-56" height="sm:h-18 h-16">
+          <Button width="sm:w-[150px] w-56" height="sm:h-18 h-16" onClick={addAnimal}>
             <IoAdd className="h-16 w-8 sm:w-10 sm:h-16" />
             Adicionar
           </Button>

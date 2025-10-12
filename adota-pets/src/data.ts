@@ -1,7 +1,7 @@
 import { IPet } from "./types/IPet";
 export  const pets:IPet[] = [
     {
-        id: 1,
+        id: "1",
         nome: "Luna",   
         tipo: "Cachorro",
         idade: 2,
@@ -14,7 +14,7 @@ export  const pets:IPet[] = [
         quantidade_dias_adocao: 10
     },
     {
-        id: 2,
+        id: "2",
         nome: "Mia",   
         tipo: "Gato",
         idade: 1,
@@ -27,7 +27,7 @@ export  const pets:IPet[] = [
         quantidade_dias_adocao: 5
     },
     {
-        id: 3,
+        id: "3",
         nome: "Max",   
         tipo: "Cachorro",
         idade: 3,
@@ -40,7 +40,7 @@ export  const pets:IPet[] = [
         quantidade_dias_adocao: 20
     },
     {
-        id: 4,
+        id: "4",
         nome: "Bella",   
         tipo: "Gato",
         idade: 4,
@@ -53,7 +53,7 @@ export  const pets:IPet[] = [
         quantidade_dias_adocao: 15
     },
     {
-        id: 5,
+        id: "5",
         nome: "Charlie",        
         tipo: "Cachorro",       
         idade: 2,                       
@@ -66,7 +66,7 @@ export  const pets:IPet[] = [
         quantidade_dias_adocao: 8   
     },
     {
-        id: 6,
+        id: "6",
         nome: "Lucy",           
         tipo: "Gato",
         idade: 3,
