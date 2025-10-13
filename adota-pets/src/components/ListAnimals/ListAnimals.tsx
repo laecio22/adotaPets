@@ -11,8 +11,8 @@ const ListAnimals = () => {
   const { listPets }: { listPets: IPet[] } = useContext(AnimalContext);
   const [isOpenModal, setIsOpenModal] =  useState(false)
 
-  const  addAnimal  = () => {
-    console.log('adicionou animal')
+  const  openModalAnimal  = () => {    
+    setIsOpenModal(!isOpenModal)
   }
 
   return (
@@ -24,7 +24,7 @@ const ListAnimals = () => {
         <h1 className="font-semibold text-4xl text-black">Listagem de Animais</h1>
         <nav className="mt-4 flex justify-between" aria-label="Ações de listagem">
           <Input type="text" name="search" placeholder="Buscar  animal" />
-          <Button width="sm:w-[150px] w-56" height="sm:h-18 h-16" onClick={addAnimal}>
+          <Button width="sm:w-[150px] w-56" height="sm:h-18 h-16" onClick={openModalAnimal}>
             <IoAdd className="h-16 w-8 sm:w-10 sm:h-16" />
             Adicionar
           </Button>
