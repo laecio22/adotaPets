@@ -1,5 +1,6 @@
 import React, { ReactNode, useEffect } from "react";
 import { createPortal } from "react-dom";
+import { RiCloseLargeFill } from "react-icons/ri";
 
 interface IModalProps {
   children: ReactNode;
@@ -46,9 +47,9 @@ const Modal = ({ children, open, setOpen }: IModalProps) => {
         <button
           aria-label="Fechar"
           onClick={() => setOpen(false)}
-          className="absolute top-3 right-3 text-gray-600 hover:text-gray-800"
+          className="absolute top-3 right-3 text-gray-600 hover:text-gray-800 cursor-pointer"
         >
-          ×
+          <RiCloseLargeFill />
         </button>
         <div className="p-6">{children}</div>
       </div>

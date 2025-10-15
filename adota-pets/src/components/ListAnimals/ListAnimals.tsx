@@ -17,13 +17,21 @@ const ListAnimals = () => {
 
   return (
     <main className="max-w-[1200px] mx-auto">
-      <Modal open={isOpenModal} setOpen={setIsOpenModal}>
-        TEXTO  MODAL
+      <Modal open={isOpenModal} setOpen={setIsOpenModal} >
+        <header>
+          <h2>Cadastro de  Animal</h2>
+        </header>
+        <form>
+          <Input type="text" name="nome" placeholder="Informe  o nome  do animal" id="nome"
+          
+          />
+        </form>
+        
       </Modal>
       <header className="bg-white px-8 py-12 border border-indigo-200 rounded-xl mx-5">
         <h1 className="font-semibold text-4xl text-black">Listagem de Animais</h1>
         <nav className="mt-4 flex justify-between" aria-label="Ações de listagem">
-          <Input type="text" name="search" placeholder="Buscar  animal" />
+          <Input type="text" name="search" placeholder="Buscar  animal"id="search" />
           <Button width="sm:w-[150px] w-56" height="sm:h-18 h-16" onClick={openModalAnimal}>
             <IoAdd className="h-16 w-8 sm:w-10 sm:h-16" />
             Adicionar

@@ -1,9 +1,11 @@
 import { InputProps } from "../../types/InputProps"
 
-const Input = ({type, name,  placeholder}: InputProps) => {
+const Input = ({type, name,  placeholder, width="w-1/2", height="h-16", id}: InputProps) => {
   return (
-     <input type={type} placeholder={placeholder}  name= {name} className="border border-slate-300 rounded-md outline-offset-0 outline-blue-500 focus:outline-2 
-     px-4 py-1 w-1/2 h-16 placeholder:text-cyan-800 "/>
+     <input type={type} placeholder={placeholder}  name= {name} id={id} className={
+      `border border-slate-300 rounded-md outline-offset-0 outline-blue-500 focus:outline-2 
+     px-4 py-1 ${width} ${height} placeholder:text-cyan-800`
+     }/>
   )
 }
 
