@@ -6,9 +6,10 @@ interface IModalProps {
   children: ReactNode;
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  width?: string;
 }
 
-const Modal = ({ children, open, setOpen }: IModalProps) => {
+const Modal = ({ children, open, setOpen, width="w-5xl" }: IModalProps) => {
   useEffect(() => {
     if (!open) return;
 
@@ -30,18 +31,18 @@ const Modal = ({ children, open, setOpen }: IModalProps) => {
 
   return createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center"
+      className="fixed inset-0 z-50 flex items-center justify-center "
       role="dialog"
       aria-modal="true"
     >
       {/* backdrop */}
       <div
-        className="absolute inset-0 bg-black/60"
+        className="absolute inset-0 bg-black/60 "
         onClick={() => setOpen(false)}
       />
       {/* modal content */}
       <div
-        className="relative z-10 bg-white dark:bg-slate-800 rounded-lg shadow-lg max-w-lg w-full mx-4"
+        className={`relative z-10 bg-white dark:bg-slate-800 rounded-lg shadow-lg   mx-4 ${width}`}
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -51,7 +52,7 @@ const Modal = ({ children, open, setOpen }: IModalProps) => {
         >
           <RiCloseLargeFill />
         </button>
-        <div className="p-6">{children}</div>
+        <div className="p-8 flex flex-col w-4/5 mx-auto my-2">{children}</div>
       </div>
     </div>,
     document.body
