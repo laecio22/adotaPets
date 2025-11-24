@@ -15,17 +15,18 @@ const ListAnimals = () => {
   const openModalAnimal = () => {
     setIsOpenModal(!isOpenModal);
   };
-  
 
   return (
     <main className="max-w-[1200px] mx-auto">
       <Modal open={isOpenModal} setOpen={setIsOpenModal}>
         <header className="mb-8">
-          <h2 className="text-4xl font-bold text-center ">Cadastro de Animal</h2>
+          <h2 className="text-4xl font-bold text-center ">
+            Cadastro de Animal
+          </h2>
         </header>
         <form className="flex flex-col gap-8">
           <div className="flex gap-4 items-center">
-            <Label forInput="nome" value="Nome"/>
+            <Label forInput="nome" value="Nome" />
             <Input
               type="text"
               name="nome"
@@ -34,13 +35,75 @@ const ListAnimals = () => {
               width="w-full"
             />
           </div>
-            <div className="flex gap-4 items-center">
-            <Label forInput="nome" value="Nome"/>
+          <div className="flex gap-4 items-center">
+            <Label forInput="tipo" value="Tipo" />
             <Input
               type="text"
-              name="nome"
-              placeholder="Informe  o nome  do animal"
-              id="nome"
+              name="tipo"
+              placeholder="Informe  o tipo da  espécie  do animal"
+              id="tipo"
+              width="w-full"
+            />
+          </div>
+          <div className="flex gap-4 items-center">
+            <Label forInput="idade" value="Idade" />
+            <Input
+              type="number"
+              name="idade"
+              placeholder="Informe  a  idade  do animal"
+              id="idade"
+              width="w-full"
+            />
+          </div>
+          <div className="flex gap-4 items-center">
+            <p>Sexo:</p>
+            <Label forInput="femea" value="Femêa" />
+            <Input
+              type="radio"
+              name="sexo"
+              id="femea"
+              height="h-[25px]"
+              width="w-[30px]"
+            />
+
+            <Label forInput="macho" value="Macho" />
+            <Input
+              type="radio"
+              name="sexo"
+              id="macho"
+              height="h-[25px]"
+              width="w-[30px]"
+            />
+          </div>
+          <div className="flex gap-4 items-center">
+            <Label forInput="tamanho" value="Tamanho" />
+            <select name="tamanho" id="tamanho">
+              <option value="" disabled>
+                {" "}
+                Selecione o tamanho do animal
+              </option>
+              <option value="pequeno">Pequeno</option>
+              <option value="medio">Médio</option>
+              <option value="grande">Grande</option>
+            </select>
+          </div>
+          <div className="flex gap-4 items-center">
+            <Label forInput="peso" value="Peso" />
+            <Input
+              type="text"
+              name="peso"
+              placeholder="Informe o peso do  animal"
+              id="peso"
+              width="w-full"
+            />
+          </div>
+          <div className="flex gap-4 items-center">
+            <Label forInput="imagem" value="Imagem" />
+            <Input
+              type="file"
+              id="imagem"
+              name="imagem"
+              accept="image/png, image/jpeg"
               width="w-full"
             />
           </div>
