@@ -6,7 +6,7 @@ interface ILabelProps {
 
 const Label = ({value, forInput}: ILabelProps) => {
   return (
-    <label htmlFor={forInput}>{value}:</label>
+    <label htmlFor={forInput}>{value}</label>
   )
 }
 

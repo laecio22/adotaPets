@@ -107,6 +107,28 @@ const ListAnimals = () => {
               width="w-full"
             />
           </div>
+          <div className="flex gap-4 items-center">
+            <Label forInput="descricao" value="Descrição" />
+             <textarea name="descricao" id="descricao" className="w-full h-40"></textarea>
+          </div>
+            <div className="flex gap-4 items-center">
+            <Label forInput="situacao" value="Situação" />
+            <Input
+              type="text"
+              id="situacao"
+              name="adotado"              
+              width="w-full"
+            />
+          </div>
+            <div className="flex gap-4 items-center">
+            <Label forInput="diasAdocao" value="Dias para doação " />
+            <Input
+              type="number"
+              id="diasAdocao"
+              name="quantidade_dias_adocao"              
+              width="w-full"
+            />
+          </div>
         </form>
       </Modal>
       <header className="bg-white px-8 py-12 border border-indigo-200 rounded-xl mx-5">
