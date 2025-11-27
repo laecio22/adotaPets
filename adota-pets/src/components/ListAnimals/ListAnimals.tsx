@@ -7,6 +7,7 @@ import { AnimalContext } from "../../contexts/AnimalContext";
 import { IPet } from "../../types/IPet";
 import Modal from "../Modals/Modal";
 import Label from "../../ui/Label/Label";
+import Select from "../../ui/Select/Select";
 
 const ListAnimals = () => {
   const { listPets }: { listPets: IPet[] } = useContext(AnimalContext);
@@ -77,15 +78,15 @@ const ListAnimals = () => {
           </div>
           <div className="flex gap-4 items-center">
             <Label forInput="tamanho" value="Tamanho" />
-            <select name="tamanho" id="tamanho">
-              <option value="" disabled>
+            <Select name="tamanho" id="tamanho"  width="w-full" >
+                <option value="" disabled>
                 {" "}
                 Selecione o tamanho do animal
               </option>
               <option value="pequeno">Pequeno</option>
               <option value="medio">Médio</option>
               <option value="grande">Grande</option>
-            </select>
+             </Select>            
           </div>
           <div className="flex gap-4 items-center">
             <Label forInput="peso" value="Peso" />
@@ -113,12 +114,12 @@ const ListAnimals = () => {
           </div>
             <div className="flex gap-4 items-center">
             <Label forInput="situacao" value="Situação" />
-            <Input
-              type="text"
-              id="situacao"
-              name="adotado"              
-              width="w-full"
-            />
+            <Select name="adotado" id="situacao" width="w-full">
+               <option value="" disabled>Selecione  a  situação atual do animal</option>
+               <option value="adotado">Adotado</option>
+               <option value="aguardando">Aguardando adoção</option>
+               <option value="temporario">Lar temporário</option>
+            </Select>
           </div>
             <div className="flex gap-4 items-center">
             <Label forInput="diasAdocao" value="Dias para doação " />

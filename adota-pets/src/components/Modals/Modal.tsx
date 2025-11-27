@@ -42,7 +42,8 @@ const Modal = ({ children, open, setOpen, width="w-5xl" }: IModalProps) => {
       />
       {/* modal content */}
       <div
-        className={`relative z-10 bg-white dark:bg-slate-800 rounded-lg shadow-lg   mx-4 ${width}`}
+        className={`relative z-10 bg-white dark:bg-slate-800 rounded-lg shadow-lg   mx-4 ${width}
+        max-h-[90vh] overflow-y-auto`}
         onClick={(e) => e.stopPropagation()}
       >
         <button
