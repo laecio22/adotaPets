@@ -6,6 +6,7 @@ import NotFound from "./components/NotFound/NotFound";
 
 const Dashboard = lazy(() => import("./components/Dashboard/Dashboard"));
 const ListAnimals = lazy(() => import("./components/ListAnimals/ListAnimals"));
+const RegisterAnimal = lazy(() => import("./components/RegisterAnimal/RegisterAnimal"));
 const ListVolunteer = lazy(
   () => import("./components/ListVolunteer/ListVolunteer")
 );
@@ -35,6 +36,14 @@ function App() {
                 element={
                   <Suspense fallback={<Loading />}>
                     <ListAnimals />
+                  </Suspense>
+                }
+              ></Route>
+              <Route
+                path="/cadastrarAnimal"
+                element={
+                  <Suspense fallback={<Loading />}>
+                    <RegisterAnimal />
                   </Suspense>
                 }
               ></Route>
