@@ -60,9 +60,14 @@ const RegisterAnimal = () => {
         </h1>
       </header>
       <section className="bg-white border border-indigo-200 rounded-xl min-h-[400px] mt-8 mx-5 p-8">
-        <form className="flex flex-col gap-8" onSubmit={handleSubmit}>
-          <div className="flex gap-4 items-center">
+        <form
+          className="grid grid-cols-12 gap-y-6 gap-x-4 items-center"
+          onSubmit={handleSubmit}
+        >
+          <div className="col-span-1">
             <Label forInput="nome" value="Nome" />
+          </div>
+          <div className="col-span-11">
             <Input
               type="text"
               name="nome"
@@ -73,8 +78,10 @@ const RegisterAnimal = () => {
             />
           </div>
 
-          <div className="flex gap-4 items-center">
+          <div className="col-span-1">
             <Label forInput="tipo" value="Tipo" />
+          </div>
+          <div className="col-span-11">
             <Input
               type="text"
               name="tipo"
@@ -85,8 +92,10 @@ const RegisterAnimal = () => {
             />
           </div>
 
-          <div className="flex gap-4 items-center">
+          <div className="col-span-1">
             <Label forInput="idade" value="Idade" />
+          </div>
+          <div className="col-span-11">
             <Input
               type="number"
               name="idade"
@@ -97,8 +106,10 @@ const RegisterAnimal = () => {
             />
           </div>
 
-          <div className="flex gap-4 items-center">
+          <div className="col-span-1">
             <p>Sexo:</p>
+          </div>
+          <div className="col-span-11 flex items-center gap-4">
             <Label forInput="femea" value="Femêa" />
             <Input
               type="radio"
@@ -117,8 +128,10 @@ const RegisterAnimal = () => {
             />
           </div>
 
-          <div className="flex gap-4 items-center">
+          <div className="col-span-1">
             <Label forInput="tamanho" value="Tamanho" />
+          </div>
+          <div className="col-span-11">
             <Select
               name="tamanho"
               id="tamanho"
@@ -134,8 +147,10 @@ const RegisterAnimal = () => {
             </Select>
           </div>
 
-          <div className="flex gap-4 items-center">
+          <div className="col-span-1">
             <Label forInput="peso" value="Peso" />
+          </div>
+          <div className="col-span-11">
             <Input
               type="text"
               name="peso"
@@ -146,8 +161,10 @@ const RegisterAnimal = () => {
             />
           </div>
 
-          <div className="flex gap-4 items-center">
+          <div className="col-span-1">
             <Label forInput="imagem" value="Imagem" />
+          </div>
+          <div className="col-span-11">
             <Input
               type="file"
               id="imagem"
@@ -158,18 +175,22 @@ const RegisterAnimal = () => {
             />
           </div>
 
-          <div className="flex gap-4 items-center">
+          <div className="col-span-1">
             <Label forInput="descricao" value="Descrição" />
+          </div>
+          <div className="col-span-11">
             <textarea
               name="descricao"
               id="descricao"
-              className="w-full h-40"
+              className="w-full h-40 border border-slate-300 rounded-md p-2"
               onChange={handleChange as any}
             ></textarea>
           </div>
 
-          <div className="flex gap-4 items-center">
+          <div className="col-span-1">
             <Label forInput="situacao" value="Situação" />
+          </div>
+          <div className="col-span-11">
             <Select
               name="situacao"
               id="situacao"
@@ -185,18 +206,21 @@ const RegisterAnimal = () => {
             </Select>
           </div>
 
-          <div className="flex gap-4 items-center">
+          <div className="col-span-1">
             <Label forInput="diasAdocao" value="Dias para doação " />
+          </div>
+          <div className="col-span-11">
             <Input
               type="number"
               id="diasAdocao"
               name="diasAdocao"
               width="w-full"
+               placeholder="Quantidade  de dias  para  adoção"
               onChange={handleChange as any}
             />
           </div>
 
-          <div className="flex justify-end">
+          <div className="col-span-12 flex justify-end">
             <Button width="w-56" height="h-16">
               Salvar
             </Button>
