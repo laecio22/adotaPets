@@ -1,11 +1,11 @@
 export interface IPet {   
-    id: string;
+    id: number;
     nome: string;       
     tipo: string;     
     idade: number;
     sexo: string;       
     tamanho: string;
-    peso: string;
+    peso: number;
     imagem: string;
     descricao: string;
     adotado: boolean;

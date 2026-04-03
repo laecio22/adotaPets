@@ -152,10 +152,11 @@ const RegisterAnimal = () => {
           </div>
           <div className="col-span-11">
             <Input
-              type="text"
+              type="number"
               name="peso"
               placeholder="Informe o peso do  animal"
               id="peso"
+              step="0.1"
               width="w-full"
               onChange={handleChange as any}
             />

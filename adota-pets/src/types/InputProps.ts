@@ -6,4 +6,5 @@ export interface InputProps {
   height?: string;
   id: string;
   accept?: string;
+  step?: string;
 }
